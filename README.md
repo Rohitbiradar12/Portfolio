@@ -14,8 +14,7 @@ Lazy Loading & Optimized Assets: Ensures a fast and smooth user experience.
 
 1. Clone this repository:
    ```bash
-   git clone <repository-url>
-   cd <project-folder>
+   git clone https://github.com/Rohitbiradar12/Portfolio.git
 
 2. Install dependencies:
    ```bash
