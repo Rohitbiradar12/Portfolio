@@ -11,6 +11,7 @@ Modern Tech Stack: Built with the latest web development technologies.
 User-Friendly Navigation: Clean and intuitive interface for easy browsing.
 Lazy Loading & Optimized Assets: Ensures a fast and smooth user experience.
 
+
 1. Clone this repository:
    ```bash
    git clone <repository-url>
