@@ -11,4 +11,19 @@ Modern Tech Stack: Built with the latest web development technologies.
 User-Friendly Navigation: Clean and intuitive interface for easy browsing.
 Lazy Loading & Optimized Assets: Ensures a fast and smooth user experience.
 
+1. Clone this repository:
+   ```bash
+   git clone <repository-url>
+   cd <project-folder>
 
+2. Install dependencies:
+   ```bash
+   npm install
+
+3. Start the development server:
+   ```bash
+   npm run dev
+
+4. Open the app in your browser:
+   ```bash
+   http://localhost:5173
