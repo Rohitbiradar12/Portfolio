@@ -29,43 +29,39 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs
-    .sendForm(
+    // Send the incoming email using the template for the message sent
+    emailjs.sendForm(
       import.meta.env.VITE_EMAILJS_SERVICE_ID, 
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID_USER, 
       formRef.current, 
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY 
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
     )
     .then(
       () => {
-        setSuccess(true);
+        // Send the auto-reply email using a different template
+        const userEmail = formRef.current.email.value; // Use the correct input name for the email
+        emailjs.send(
+          import.meta.env.VITE_EMAILJS_SERVICE_ID, 
+          import.meta.env.VITE_EMAILJS_TEMPLATE_ID_REPLY, 
+          { to_email: userEmail }, // Send the user's email correctly
+          import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
+        .then(
+          () => {
+            setSuccess(true);
+            setTimeout(() => setSuccess(false), 3000); // Hide the success message after 3 seconds
+          },
+          () => {
+            setError(true);
+            setTimeout(() => setError(false), 3000); // Hide the error message after 3 seconds
+          }
+        );
       },
       () => {
         setError(true);
+        setTimeout(() => setError(false), 3000); // Hide the error message after 3 seconds
       }
     );
-
-
-    emailjs
-      .send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID_REPLY,
-        {
-          to_email: formRef.current.user_email.value, // Use the email entered in the form
-        },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      )
-      .then(
-        () => {
-          console.log("Auto-reply sent successfully");
-        },
-        () => {
-          console.log("Failed to send auto-reply");
-        }
-      );
-  
-  
-  
   };
 
   return (
