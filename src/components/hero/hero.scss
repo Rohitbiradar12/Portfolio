@@ -95,13 +95,13 @@
     top: 40%;
     left: 80%;
     transform: translate(-50%, -50%);
-    width: 60%; /* Adjust as needed for size */
+    width: 60%; 
     height: auto;
   
     img {
       width: 100%;
       height: auto;
-      object-fit: contain; /* Ensures the aspect ratio is maintained */
+      object-fit: contain; 
     }
   }
   

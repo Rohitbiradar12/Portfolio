@@ -50,7 +50,6 @@
       width: 100%;
     }
 
-
     .phoneSvg {
       stroke: orange;
       position: absolute;
@@ -86,6 +85,28 @@
           padding: 10px;
         }
       }
+    }
+  }
+
+  .success,
+  .error {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: green;
+    animation: fadeIn 2s ease-in-out forwards;
+
+    &.error {
+      color: red;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 }
