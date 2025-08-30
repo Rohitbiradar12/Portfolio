@@ -12,3 +12,18 @@ User-Friendly Navigation: Clean and intuitive interface for easy browsing.
 Lazy Loading & Optimized Assets: Ensures a fast and smooth user experience.
 
 
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Rohitbiradar12/Portfolio.git
+
+2. Install dependencies:
+   ```bash
+   npm install
+
+3. Start the development server:
+   ```bash
+   npm run dev
+
+4. Open the app in your browser:
+   ```bash
+   http://localhost:5173
